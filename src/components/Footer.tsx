@@ -11,19 +11,19 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-[#FAFAFA] py-12 border-t border-slate-200">
+    <footer className="bg-[#030810] py-12 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="text-2xl font-display font-semibold tracking-tight text-navy">
+        <div className="text-2xl font-display font-semibold tracking-tight text-white">
           LUMINA
         </div>
         
-        <div className="text-sm text-navy/70 text-center md:text-left">
+        <div className="text-sm text-white/50 text-center md:text-left">
           © {new Date().getFullYear()} Lumina Law Partners – {t.rights}
         </div>
 
         <button 
           onClick={scrollToTop}
-          className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-navy hover:bg-navy hover:text-white transition-all duration-300"
+          className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:bg-white/10 hover:text-white transition-all duration-300"
         >
           <ArrowUp size={18} />
         </button>

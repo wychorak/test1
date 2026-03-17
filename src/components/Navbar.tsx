@@ -17,7 +17,12 @@ const navLinks = [
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { openModal, language, setLanguage } = useAppStore();
+  const { language, setLanguage } = useAppStore();
+
+  const scrollToForm = () => {
+    document.querySelector("#letter-form")?.scrollIntoView({ behavior: "smooth" });
+    setMobileMenuOpen(false);
+  };
   const t = translations[language].nav;
 
   useEffect(() => {
@@ -34,15 +39,9 @@ export function Navbar() {
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
-    // @ts-ignore
-    if (window.lenis) {
-      // @ts-ignore
-      window.lenis.scrollTo(href, { offset: -80 });
-    } else {
-      const target = document.querySelector(href);
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth" });
-      }
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
     }
     setMobileMenuOpen(false);
   };
@@ -95,7 +94,7 @@ export function Navbar() {
                 <Globe size={16} />
                 <span>{language.toUpperCase()}</span>
               </button>
-              <Button onClick={openModal} variant={scrolled ? "primary" : "glass"}>
+              <Button onClick={scrollToForm} variant={scrolled ? "primary" : "glass"}>
                 {t.book}
               </Button>
             </div>
@@ -146,7 +145,7 @@ export function Navbar() {
                 <Globe size={24} />
                 <span>{language === 'pl' ? 'English' : 'Polski'}</span>
               </button>
-              <Button onClick={() => { setMobileMenuOpen(false); openModal(); }} className="mt-8">
+              <Button onClick={scrollToForm} className="mt-8">
                 {t.book}
               </Button>
             </div>

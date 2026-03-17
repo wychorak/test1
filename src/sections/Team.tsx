@@ -16,7 +16,7 @@ export function Team() {
   const t = translations[language].team;
 
   return (
-    <section id="team" className="py-24 md:py-32 bg-[#FAFAFA] relative z-10">
+    <section id="team" className="py-24 md:py-32 bg-[#080F1E] relative z-10">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -25,11 +25,11 @@ export function Team() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="mb-12 md:mb-20 text-center"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-semibold text-navy mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-semibold text-white mb-6">
             {t.title} <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-navy to-cyan">{t.titleHighlight}</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-cyan">{t.titleHighlight}</span>
           </h2>
-          <p className="text-lg text-navy/80 font-light max-w-2xl mx-auto">
+          <p className="text-lg text-white/60 font-light max-w-2xl mx-auto">
             {t.subtitle}
           </p>
         </motion.div>
@@ -69,9 +69,9 @@ export function Team() {
               </div>
               
               <div className="text-center">
-                <h3 className="text-xl font-display font-semibold text-navy mb-1">{member.name}</h3>
+                <h3 className="text-xl font-display font-semibold text-white mb-1">{member.name}</h3>
                 <p className="text-cyan font-medium text-sm mb-1 uppercase tracking-wider">{member.role}</p>
-                <p className="text-navy/70 text-sm font-light">{member.focus}</p>
+                <p className="text-white/50 text-sm font-light">{member.focus}</p>
               </div>
             </motion.div>
           ))}

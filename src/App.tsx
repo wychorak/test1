@@ -1,48 +1,21 @@
-import { useEffect } from 'react';
-import Lenis from 'lenis';
 import { Toaster } from 'sonner';
 import { Navbar } from './components/Navbar';
 import { Hero } from './sections/Hero';
 import { PracticeAreas } from './sections/PracticeAreas';
 import { About } from './sections/About';
 import { Team } from './sections/Team';
-import { Cases } from './sections/Cases';
 import { Insights } from './sections/Insights';
 import { Contact } from './sections/Contact';
+import { LetterForm } from './sections/LetterForm';
 import { Footer } from './components/Footer';
 import { FloatingOrb } from './components/FloatingOrb';
 import { BookingModal } from './components/BookingModal';
 import { VideoModal } from './components/VideoModal';
 
 export default function App() {
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: 'vertical',
-      gestureOrientation: 'vertical',
-      smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 2,
-    });
-
-    // @ts-ignore
-    window.lenis = lenis;
-
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
 
   return (
-    <div className="relative min-h-screen bg-[#FAFAFA] text-navy font-sans overflow-hidden">
+    <div className="relative min-h-screen bg-[#050A14] text-white font-sans overflow-hidden">
       <Navbar />
       
       <main>
@@ -50,9 +23,9 @@ export default function App() {
         <PracticeAreas />
         <About />
         <Team />
-        <Cases />
         <Insights />
         <Contact />
+        <LetterForm />
       </main>
 
       <Footer />

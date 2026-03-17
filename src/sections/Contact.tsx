@@ -19,8 +19,8 @@ export function Contact() {
   const t = translations[language].contact;
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-white relative z-10 overflow-hidden">
-      <div className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-navy/5 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/3 pointer-events-none" />
+    <section id="contact" className="py-24 md:py-32 bg-[#080F1E] relative z-10 overflow-hidden">
+      <div className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-cyan/5 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/3 pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <motion.div
@@ -30,11 +30,11 @@ export function Contact() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="mb-12 md:mb-20 text-center max-w-3xl mx-auto"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-semibold text-navy mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-semibold text-white mb-6">
             {t.title} <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-navy to-gold">{t.titleHighlight}</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-[#D4AF37]">{t.titleHighlight}</span>
           </h2>
-          <p className="text-lg text-navy/80 font-light mb-8">
+          <p className="text-lg text-white/60 font-light mb-8">
             {t.subtitle}
           </p>
           <Button onClick={openModal} className="text-lg px-8 py-4">
@@ -69,15 +69,15 @@ export function Contact() {
                 <div className="p-6 space-y-4">
                   <div className="flex items-start">
                     <MapPin size={18} className="text-cyan mt-1 mr-3 shrink-0" />
-                    <p className="text-navy/80 font-light leading-relaxed">{office.address}</p>
+                    <p className="text-white/60 font-light leading-relaxed">{office.address}</p>
                   </div>
                   <div className="flex items-center">
                     <Phone size={18} className="text-cyan mr-3 shrink-0" />
-                    <p className="text-navy/80 font-light">{phones[index]}</p>
+                    <p className="text-white/60 font-light">{phones[index]}</p>
                   </div>
                   <div className="flex items-center">
                     <Mail size={18} className="text-cyan mr-3 shrink-0" />
-                    <p className="text-navy/80 font-light">{emails[index]}</p>
+                    <p className="text-white/60 font-light">{emails[index]}</p>
                   </div>
                 </div>
               </LiquidGlass>

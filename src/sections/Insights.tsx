@@ -15,7 +15,7 @@ export function Insights() {
   const t = translations[language].insights;
 
   return (
-    <section id="insights" className="py-24 md:py-32 bg-[#FAFAFA] relative z-10">
+    <section id="insights" className="py-24 md:py-32 bg-[#060C18] relative z-10">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -25,11 +25,11 @@ export function Insights() {
           className="mb-12 md:mb-20 flex flex-col md:flex-row justify-between items-end gap-6 md:gap-8"
         >
           <div className="max-w-2xl">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-semibold text-navy mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-semibold text-white mb-6">
               {t.title} <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-navy to-cyan">{t.titleHighlight}</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-cyan">{t.titleHighlight}</span>
             </h2>
-            <p className="text-lg text-navy/80 font-light">
+            <p className="text-lg text-white/60 font-light">
               {t.subtitle}
             </p>
           </div>
@@ -58,22 +58,22 @@ export function Insights() {
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 text-xs font-medium tracking-wide text-white bg-navy/80 backdrop-blur-md rounded-full uppercase">
+                    <span className="px-3 py-1 text-xs font-medium tracking-wide text-white bg-black/60 backdrop-blur-md rounded-full uppercase">
                       {article.category}
                     </span>
                   </div>
                 </div>
                 
                 <div className="p-6 flex flex-col flex-grow">
-                  <div className="flex items-center text-xs text-navy/70 mb-4 uppercase tracking-wider font-medium">
+                  <div className="flex items-center text-xs text-white/50 mb-4 uppercase tracking-wider font-medium">
                     <span>{article.date}</span>
                     <span className="mx-2">•</span>
                     <span>{article.readTime}</span>
                   </div>
-                  <h3 className="text-xl font-display font-semibold text-navy mb-4 group-hover:text-cyan transition-colors line-clamp-3">
+                  <h3 className="text-xl font-display font-semibold text-white mb-4 group-hover:text-cyan transition-colors line-clamp-3">
                     {article.title}
                   </h3>
-                  <div className="mt-auto pt-4 border-t border-navy/10 flex items-center text-sm font-medium text-navy group-hover:text-cyan transition-colors">
+                  <div className="mt-auto pt-4 border-t border-white/10 flex items-center text-sm font-medium text-white/60 group-hover:text-cyan transition-colors">
                     {t.readArticle}
                     <ArrowUpRight size={16} className="ml-2 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
                   </div>
