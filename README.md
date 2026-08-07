@@ -1,20 +1,28 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Lumina Law Partners — website concept
 
-# Run and deploy your AI Studio app
+> Status: working fictional portfolio demo. [View the live site](https://wychorak.github.io/lumina-law-website/).
 
-This contains everything you need to run your app locally.
+A bilingual premium-law-firm website concept focused on technology, AI regulation and international corporate work. The company, team, cases and metrics shown in the interface are fictional and exist only to demonstrate product design and front-end implementation.
 
-View your app in AI Studio: https://ai.studio/apps/ebd3cfd1-b1e2-430e-9dcc-46ca551e0690
+## Highlights
 
-## Run Locally
+- Polish and English content
+- responsive editorial layout and animated hero
+- practice areas, case studies, team and insights sections
+- appointment and client-intake interactions
+- Three.js visuals, motion effects and accessible navigation
 
-**Prerequisites:**  Node.js
+## Stack
 
+React 19, TypeScript, Vite, Tailwind CSS, Motion, Three.js and React Three Fiber.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Run locally
+
+```bash
+npm ci
+npm run dev
+```
+
+## Verification
+
+`npm run lint` and `npm run build` are the expected quality gates. The project is a design/engineering showcase, not a real law firm's website and not a source of legal advice.

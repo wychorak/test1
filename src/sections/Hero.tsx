@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll, useTransform, type Variants } from "motion/react";
 import { Button } from "@/components/ui/Button";
 import { useAppStore } from "@/lib/store";
 import { translations } from "@/lib/translations";
@@ -25,17 +25,17 @@ export function Hero() {
     document.querySelector("#letter-form")?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: {},
     visible: { transition: { staggerChildren: 0.15, delayChildren: 0.3 } },
   };
 
-  const lineReveal = {
+  const lineReveal: Variants = {
     hidden: { y: 80, opacity: 0 },
     visible: { y: 0, opacity: 1, transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] } },
   };
 
-  const fadeUp = {
+  const fadeUp: Variants = {
     hidden: { y: 30, opacity: 0 },
     visible: { y: 0, opacity: 1, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } },
   };

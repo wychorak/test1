@@ -1,9 +1,9 @@
 {
-  "name": "react-example",
+  "name": "lumina-law-website",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://wychorak.github.io/test1",
+  "homepage": "https://wychorak.github.io/lumina-law-website",
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "vite build",
@@ -13,7 +13,6 @@
     "deploy": "npm run build && npx gh-pages -d dist -b gh-pages"
   },
   "dependencies": {
-    "@google/genai": "^1.29.0",
     "@hookform/resolvers": "^5.2.2",
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.5.0",
